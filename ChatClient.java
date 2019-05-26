@@ -13,7 +13,7 @@ public class ChatClient {
 		PrintWriter pw = null;
 		boolean endflag = false;
 		try{
-			sock = new Socket(args[1], 10001);
+			sock = new Socket(args[1], 4000);
 			pw = new PrintWriter(new OutputStreamWriter(sock.getOutputStream()));
 			br = new BufferedReader(new InputStreamReader(sock.getInputStream()));
 			BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
@@ -34,7 +34,7 @@ public class ChatClient {
 			System.out.println("Connection closed.");
 		}catch(Exception ex){
 			if(!endflag)
-				System.out.println(ex);
+				System.out.println(ex); 
 		}finally{
 			try{
 				if(pw != null)
