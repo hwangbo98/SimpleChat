@@ -1,3 +1,4 @@
+//https://github.com/hwangbo98/SimpleChat.git 21800801 황보연 
 import java.net.*;
 import java.io.*;
 import java.util.*;
@@ -56,10 +57,10 @@ class ChatThread extends Thread{
 			while((line = br.readLine()) != null){
 				if(line.equals("/quit"))
 					break;
-				if(line.indexOf("/to ") == 0){
+				else if(line.indexOf("/to ") == 0){
 					sendmsg(line);
 				}
-				if(line.equals("/userlist")){
+				else if(line.equals("/userlist")){
 					send_userlist();
 				}
 				else if(line.contains("shit")) {
